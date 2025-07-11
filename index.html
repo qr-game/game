@@ -450,24 +450,26 @@
         }
 
         @media (max-width: 768px) {
+            /* Keep side-by-side layout on phones */
             .game-container {
-                flex-direction: column;
+                flex-direction: row;
+                gap: 10px;
+                padding: 10px;
+                align-items: flex-start;
+            }
+            .game-container {
+                flex-direction: row;
                 gap: 15px;
                 padding: 10px;
+                align-items: flex-start;
             }
             
             .game-info {
-                flex-direction: row;
+                flex-direction: column;
                 flex-wrap: wrap;
                 min-width: unset;
                 width: 100%;
                 gap: 10px;
-            }
-            
-            .info-panel {
-                flex: 1;
-                min-width: 120px;
-                padding: 15px;
             }
             
             .mobile-controls {
@@ -475,8 +477,10 @@
             }
             
             #gameCanvas {
-                width: 300px;
-                height: 600px;
+                width: 45vw;              /* responsive width */
+                max-width: 320px;         /* don't exceed desktop size */
+                height: 90vw;             /* maintain 1:2 ratio */
+                max-height: 640px;
             }
             
             .score {
