@@ -450,51 +450,33 @@
         }
 
         @media (max-width: 768px) {
-            /* Keep side-by-side layout on phones */
-            .game-container {
-                flex-direction: row;
-                gap: 10px;
-                padding: 10px;
-                align-items: flex-start;
-            }
-            .game-container {
-                flex-direction: row;
-                gap: 15px;
-                padding: 10px;
-                align-items: flex-start;
+            /* Responsive phone layout */
+            .game-container{
+                flex-direction:row;
+                gap:10px;
+                padding:10px;
+                align-items:flex-start;
+                height:100vh;
+                justify-content:center;
             }
             
             .game-info {
                 flex-direction: column;
                 flex-wrap: wrap;
-                min-width: unset;
-                width: 100%;
-                gap: 10px;
-            }
-            
-            .mobile-controls {
-                display: flex;
-            }
-            
-            #gameCanvas {
-                width: 45vw;              /* responsive width */
-                max-width: 320px;         /* don't exceed desktop size */
-                height: 90vw;             /* maintain 1:2 ratio */
-                max-height: 640px;
-            }
-            
-            .score {
-                font-size: 24px;
-            }
-            
-            .level {
                 font-size: 18px;
+                font-weight: 700;
+                backdrop-filter: blur(10px);
+                transition: all 0.3s ease;
+                text-transform: uppercase;
+                letter-spacing: 1px;
             }
-        }
 
-        .performance-mode {
-            filter: contrast(1.2) brightness(1.1) saturate(1.3);
-        }
+            .pause-btn:hover {
+                transform: scale(1.05);
+                background: linear-gradient(45deg, rgba(255, 255, 255, 0.3), rgba(0, 255, 255, 0.3));
+                box-shadow: 0 5px 20px rgba(0, 255, 255, 0.4);
+            }
+        } 
         /* ------ Start Screen Styles ------ */
         .hidden{display:none;}
         .start-screen{
