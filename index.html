@@ -573,6 +573,7 @@
         @media (max-width:480px){:root{--board-scale:0.5;}}
         .game-board{transform:scale(var(--board-scale));transform-origin:top left;}
         .game-info{transform:scale(var(--board-scale));transform-origin:top right;}
+        .mobile-controls,.mobile-btn{display:none !important;}
         </style>
 </head>
 <body>
@@ -641,7 +642,7 @@
         </div>
     </div>
 
-    <div class="mobile-controls">
+    <!-- mobile controls removed -->
         <button class="mobile-btn" id="leftBtn">⬅️</button>
         <button class="mobile-btn" id="downBtn">⬇️</button>
         <button class="mobile-btn" id="rotateBtn">🔄</button>
